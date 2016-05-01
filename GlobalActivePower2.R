@@ -15,7 +15,7 @@ newdata <- data[data$Date %in% c("1/2/2007","2/2/2007") ,]
 
 datetime <- strptime(paste(newdata$Date, newdata$Time, sep=" "), "%d/%m/%Y %H:%M:%S") 
 
-# Make Global Active Power variable into numeric and plot as histogram
+# Make Global Active Power variable into numeric and plot
 
 GlobalActivePower <- as.numeric(newdata$Global_active_power)
 par(mfrow = c(1,1))
