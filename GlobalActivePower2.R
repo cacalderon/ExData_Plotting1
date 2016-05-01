@@ -19,9 +19,9 @@ datetime <- strptime(paste(newdata$Date, newdata$Time, sep=" "), "%d/%m/%Y %H:%M
 
 GlobalActivePower <- as.numeric(newdata$Global_active_power)
 par(mfrow = c(1,1))
-hist(GlobalActivePower, col = "red", main = "Global Active Power",xlab="Global Active Power (kilowatts)")
+plot(datetime, globalActivePower, type="l", xlab="", ylab="Global Active Power (kilowatts)")
 
-png("GlobalActivePower.png", width=480, height=480)
-hist(GlobalActivePower, col = "red", main = "Global Active Power",xlab="Global Active Power (kilowatts)")
+png("GlobalActivePower2.png", width=480, height=480)
+plot(datetime, globalActivePower, type="l", xlab="", ylab="Global Active Power (kilowatts)")
 dev.off()
 
